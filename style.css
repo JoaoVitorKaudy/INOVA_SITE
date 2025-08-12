@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+}
+
+body {
+    flex-wrap: wrap;
+}
+
+/*logo zap*/
+
+#whatsapp img {
+    width: 4rem;
+    position: fixed;
+    bottom: 10px; 
+    right: 10px; 
+    height: auto; 
+    z-index: 9999;
+    padding: 1rem;
+    transition: 0.3s;
+}
+
+#whatsapp img:hover {
+    width: 4.5rem;
+    position: fixed;
+    bottom: 10px; 
+    right: 10px;  
+    height: auto; 
+    z-index: 9999; 
+    padding: 1rem;
+}
+
+/*imagem do header*/
+
+#img_introducao {
+    background: #FF0DAE;
+    background: linear-gradient(90deg, rgba(255, 13, 174, 1) 0%, rgba(237, 83, 83, 1) 100%);
+}
+
+#img_introducao img {
+    width: 30rem;
+    display: block;
+    margin: 0 auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/*Sessao da Introducao*/
+
+#introducao img {
+    width: 43rem;
+}
+
+#botao {
+    background-color: #F50058;
+    color: #ffffff;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 3px solid #F50058;
+    border-radius: 15px;
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+#botao:hover {
+    background-color: white;
+    color: #F50058;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 3px solid #F50058;
+    border-radius: 15px;
+    padding: 0.8rem;
+    cursor: pointer;
+}
+
+#introducao {
+    display: flex;
+    align-items: flex-start; 
+    gap: 20px; 
+    padding: 3rem 4rem;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+}
+
+#introducao > div.texto {
+    flex: 1; 
+}
+
+#introducao_img_direita {
+    width: 300px;
+    height: auto;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(119, 119, 119, 0.5);
+}
+
+#destaque {
+    color: #F50058;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    margin-top: 0.5rem;
+}
+
+#horario {
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+}
+
+#paragrafo {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+/*Sessao dos Materiais*/
+
+#materiais_conteiner {
+    background: #FF0DAE;
+    background: linear-gradient(90deg, rgba(255, 13, 174, 1) 0%, rgba(237, 83, 83, 1) 100%);
+}
+
+#materiais {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1rem;
+    padding-bottom: 6rem;
+    justify-items: center; 
+}
+
+.materiais_unidades {
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23f50058' fill-opacity='0.69' fill-rule='evenodd'/%3E%3C/svg%3E");
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 330px; 
+    transition: transform 0.3s ease;
+    will-change: transform;
+    margin: 1.5rem;
+    width: 100%;
+    max-width: 250px; 
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.356);
+}
+
+.materiais_unidades:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.materiais_unidades img {
+    width: 260px;
+    margin-bottom: 1rem;
+}
+
+.materiais_unidades h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #F50058;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.575);
+    letter-spacing: 1.5px;
+}
+
+#materiais li {
+    text-transform: uppercase;
+}
+
+#materiais_conteiner h3 {
+    color: white;
+    font-size: 3rem;
+    padding: 4rem;
+}
+
+#recorte {
+    width: 240px;
+}
+
+/*Sessao perguntas*/
+#perguntas {
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23f50058' fill-opacity='0.69'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#perguntas h1 {
+    padding-bottom: 2rem;
+    color: #ac1d51;
+    text-shadow: none;
+}
+
+#perguntas details {
+    width: 90%;             
+    max-width: 1000px;      
+    margin-bottom: 1rem;
+    background-color: #f02670;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.2s ease;
+}
+
+#perguntas summary {
+    font-size: 1.1rem;
+    font-weight: bold;
+    list-style: none;
+    position: relative;
+    padding-right: 2rem;
+}
+
+#perguntas summary::marker {
+    display: none;
+}
+
+#perguntas details[open]{
+    background-color: #ac1d51;
+}
+
+#perguntas details[open] p {
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+#perguntas p {
+    margin: 1;
+    margin-top: 1rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.815);
+    padding-top: 1rem;
+}
+
+#perguntas summary::after {
+    content: "▼";
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+#perguntas details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+iframe {
+    padding: 2rem;
+}
+
+
+
+/*Sessao dos Clientes*/
+#clientes {
+    background: #FF0DAE;
+    background: linear-gradient(90deg, rgba(255, 13, 174, 1) 0%, rgba(237, 83, 83, 1) 100%);
+    padding: 2rem 4rem;
+}
+
+#clientes h2 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+/*Sessao dos Contatos*/
+#contato {
+    background-color: #b31f55;
+    padding: 3rem;
+    color: white;
+}
+
+/*TEXTO ENROLAR*/
+#texto_enrolar {
+    padding: 3rem 4rem;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+}
+
+/*DETALHES*/
+h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#carrossel{
+    font-size: 2rem;
+    padding: 3rem;
+    color: white;
+}
+
+.item {
+    text-transform: uppercase;
+    text-decoration: bold;
+    border-bottom: 2px solid #ffffff;
+}
+
+.item p {
+    padding-bottom: 2rem;
+}
+
+/*https://heropatterns.com/*/
