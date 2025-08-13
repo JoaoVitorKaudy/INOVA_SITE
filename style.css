@@ -501,3 +501,299 @@ h3 {
 
 
 /*https://heropatterns.com/*/
+
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+
+/* Tablets e telas <= 1024px */
+@media (max-width: 1024px) {
+    /* Introdução empilhada */
+    #introducao {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 2.5rem 2rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    #introducao img {
+        width: 80%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    #introducao_img_direita {
+        width: 80%;
+        max-width: 420px;
+    }
+
+    #botao {
+        font-size: 2rem;
+        padding: 0.7rem 1.4rem;
+    }
+
+    /* Materiais em 2 colunas */
+    #materiais {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 1rem 4rem;
+        gap: 1rem;
+    }
+
+    .materiais_unidades {
+        max-width: 320px;
+        height: auto;
+        margin: 1rem;
+    }
+
+    .materiais_unidades img {
+        width: 80%;
+        max-width: 240px;
+    }
+
+    /* Perguntas */
+    #perguntas {
+        padding: 2.5rem 2rem;
+    }
+
+    #perguntas h1 {
+        font-size: 3rem;
+    }
+
+    /* Texto enrolar */
+    #texto_enrolar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2.5rem 2rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        gap: 1rem;
+    }
+
+    #imagem_enrolar img {
+        position: static;
+        width: 80%;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    /* Clientes */
+    #clientes {
+        padding: 2rem;
+    }
+    #carrossel {
+        margin: 0;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Contato empilhado */
+    #contato {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 4rem 2rem;
+        gap: 1rem;
+    }
+
+    #parte1, #parte2, #parte3 {
+        padding: 1rem;
+    }
+
+    #parte1 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #parte1 img {
+        width: 14rem;
+    }
+
+    #informacao {
+        justify-content: center;
+    }
+
+    #informacao img {
+        width: 28px; 
+    }
+
+    iframe {
+        width: 100%;
+        height: 380px;
+        padding: 0;
+        border: 0;
+    }
+}
+
+/* Celulares <= 768px */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    #img_introducao img {
+        width: 85%;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    #botao {
+        font-size: 1.4rem;
+        padding: 0.6rem 1.1rem;
+        border-width: 2px;
+    }
+
+    #materiais {
+        grid-template-columns: 1fr;
+    }
+
+    .materiais_unidades {
+        max-width: 90%;
+        margin: 0.8rem auto;
+    }
+
+    .materiais_unidades h2 {
+        font-size: 1.6rem;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+
+    #materiais_conteiner h3 {
+        font-size: 2rem;
+        padding: 2.5rem 1rem;
+    }
+
+    #clientes h2 {
+        font-size: 2rem;
+        padding: 1rem 0;
+    }
+
+    .item h3 {
+        font-size: 1.4rem;
+    }
+
+    .item p {
+        font-size: 1rem;
+        padding: 1rem;
+        text-transform: none;
+    }
+
+    #perguntas h1 {
+        font-size: 2.4rem;
+    }
+
+    #perguntas details {
+        font-size: 1rem;
+        padding: 0.9rem 1.1rem;
+    }
+
+    #texto_enrolar {
+        padding: 2rem 1rem;
+    }
+
+    #imagem_enrolar img {
+        width: 90%;
+        max-width: 360px;
+    }
+
+    #contato {
+        padding: 3rem 1rem;
+    }
+
+    #parte1 img {
+        width: 12rem;
+    }
+
+    #informacao h2 {
+        font-size: 1rem;
+    }
+
+    #informacao img {
+        width: 24px;
+    }
+
+    iframe {
+        height: 320px;
+    }
+}
+
+/* Telas muito pequenas <= 480px */
+@media (max-width: 480px) {
+    #img_introducao img {
+        width: 90%;
+        padding: 2rem 0;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #botao {
+        font-size: 1.1rem;
+        padding: 0.6rem 1rem;
+        border-width: 2px;
+    }
+
+    #materiais_conteiner h3 {
+        font-size: 1.6rem;
+        padding: 2rem 1rem;
+    }
+
+    .materiais_unidades img {
+        max-width: 200px;
+    }
+
+    #clientes {
+        padding: 1.2rem;
+    }
+
+    #carrossel {
+        font-size: 1.1rem;
+        padding: 1rem;
+        border-radius: 10px;
+        margin: 0.5rem 0 1.5rem 0;
+    }
+
+    .owl-nav button {
+        padding: 0.4rem 0.8rem;
+        font-size: 1.1rem;
+    }
+
+    #perguntas {
+        padding: 2rem 1rem;
+    }
+
+    #perguntas h1 {
+        font-size: 2rem;
+    }
+
+    #texto_enrolar {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding: 1.5rem 1rem;
+    }
+
+    #imagem_enrolar img {
+        width: 95%;
+        max-width: 320px;
+    }
+
+    #contato h2 {
+        font-size: 1.1rem;
+    }
+
+    #informacao h2 {
+        font-size: 0.95rem;
+    }
+
+    #informacao img {
+        width: 20px;
+    }
+
+    iframe {
+        height: 280px;
+    }
+}
