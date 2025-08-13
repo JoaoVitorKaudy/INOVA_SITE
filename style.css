@@ -34,16 +34,27 @@ body {
 /*imagem do header*/
 
 #img_introducao {
-    background: #FF0DAE;
     background: linear-gradient(90deg, rgba(255, 13, 174, 1) 0%, rgba(237, 83, 83, 1) 100%);
 }
 
 #img_introducao img {
-    width: 30rem;
+    width: 40rem;
     display: block;
     margin: 0 auto;
     padding-top: 5rem;
     padding-bottom: 5rem;
+
+    opacity: 0;
+    transform: scale(0.9);
+    animation: aparecerZoom 1.2s ease forwards;
+    animation-delay: 0.6s;
+}
+
+@keyframes aparecerZoom {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 /*Sessao da Introducao*/
@@ -84,7 +95,7 @@ body {
     gap: 20px; 
     padding: 3rem 4rem;
     margin-top: 6rem;
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
 }
 
 #introducao > div.texto {
@@ -143,7 +154,7 @@ h1 {
 
 .materiais_unidades {
     background-color: #ffffff;
-    background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23f50058' fill-opacity='0.69' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23f50058' fill-opacity='0.35' fill-rule='evenodd'/%3E%3C/svg%3E");
     border-radius: 8px;
     padding: 1rem;
     text-align: center;
@@ -174,7 +185,7 @@ h1 {
     text-transform: uppercase;
     font-size: 2rem;
     color: #F50058;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.575);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.781);
     letter-spacing: 1.5px;
 }
 
@@ -195,7 +206,7 @@ h1 {
 /*Sessao perguntas*/
 #perguntas {
     background-color: #ffffff;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23f50058' fill-opacity='0.69'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23f50058' fill-opacity='0.55'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     padding: 3rem 4rem;
     display: flex;
     flex-direction: column;
@@ -220,10 +231,11 @@ h1 {
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     transition: 0.2s ease;
+    font-size: 1.2rem;
 }
 
 #perguntas summary {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: bold;
     list-style: none;
     position: relative;
@@ -235,7 +247,7 @@ h1 {
 }
 
 #perguntas details[open]{
-    background-color: #ac1d51;
+    background-color: #6b1233;
 }
 
 #perguntas details[open] p {
@@ -267,8 +279,6 @@ iframe {
     padding: 2rem;
 }
 
-
-
 /*Sessao dos Clientes*/
 #clientes {
     background: #FF0DAE;
@@ -283,18 +293,82 @@ iframe {
     padding: 2rem;
 }
 
-/*Sessao dos Contatos*/
-#contato {
-    background-color: #b31f55;
-    padding: 3rem;
-    color: white;
-}
 
 /*TEXTO ENROLAR*/
 #texto_enrolar {
     padding: 3rem 4rem;
     margin-top: 6rem;
     margin-bottom: 4rem;
+    display: flex;
+}
+
+#imagem_enrolar img {
+    padding: 0%;
+    width: 36rem;
+    position: absolute;
+    z-index: -1;
+}
+
+#enrolacao h1 {
+    padding-bottom: 5rem;
+    position: relative;
+}
+
+strong {
+    color: #f02670;
+}
+
+#enrolacao li {
+    font-size: 2rem;
+    transition: 0.2s;
+    text-transform: uppercase;
+    font-weight: bold;
+    list-style: none;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+#enrolacao li:hover {
+    font-size: 2.2rem;
+}
+
+#enrolacao li.show {
+    animation: fadeInUp 0.6s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.motivo_card {
+    display: flex;
+    padding: 1.5rem;
+}
+
+.motivo_card img{
+    width: 2.5rem;
+    padding-right: 1rem;
+}
+
+/*Sessao dos Contatos*/
+#contato {
+    background-color: #80153c;
+    padding: 3rem;
+    color: white;
+    display: flex;
+    padding: 10rem;
+}
+
+#parte1 img {
+    width: 15rem;
+}
+
+#parte1 {
+    padding: 2rem;
+    text-align: left;
 }
 
 /*DETALHES*/
@@ -303,20 +377,88 @@ h3 {
     text-transform: uppercase;
 }
 
-#carrossel{
-    font-size: 2rem;
-    padding: 3rem;
+#carrossel {
+    font-size: 1.6rem;
+    padding: 2rem;
     color: white;
+    background: linear-gradient(90deg, #f02670, #ac1d51);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    margin: -2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 .item {
     text-transform: uppercase;
-    text-decoration: bold;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.item h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffdfef;
+    margin-bottom: 0.5rem;
 }
 
 .item p {
-    padding-bottom: 2rem;
+    font-size: 1.4rem;
+    text-transform: none;
+    font-weight: normal;
+    color: #fff;
+    padding-bottom: 1rem;
+}
+
+/* Botões de navegação */
+.owl-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.owl-nav button {
+    background: #fff;
+    color: #ac1d51;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1.2rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.owl-nav button:hover {
+    background: #ac1d51;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Remove estilo padrão dos botões */
+.owl-nav button span {
+    display: block;
+}
+
+/* Dots (se quiser usar) */
+.owl-dots {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.owl-dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    transition: background 0.3s ease;
+}
+
+.owl-dot.active {
+    background: #fff;
 }
 
 /*https://heropatterns.com/*/
