@@ -9,18 +9,35 @@ document.addEventListener("DOMContentLoaded", () => {
                         item.classList.add("show");
                     }, index * 200); 
                 });
-                observer.disconnect();
+                observer.unobserve(entry.target); // Em vez de disconnect(), só para este alvo
             }
         });
-    }, { threshold: 1 }); 
+    }, { threshold: 0.3 }); // Reduzi para 0.3 para acionar antes
 
-    observer.observe(document.querySelector("#enrolacao"));
-});
+    const enrolacaoEl = document.querySelector("#enrolacao");
+    if (enrolacaoEl) observer.observe(enrolacaoEl);
 
+    // Carrossel responsivo
     $("#carrossel").owlCarousel({
         loop: true,
         margin: 10,
         nav: true,
         items: 1,
-        navText: ["<span>← Anterior</span>", "<span>Próximo →</span>"] 
+        navText: ["<span>← Anterior</span>", "<span>Próximo →</span>"],
+        responsive: {
+            0: {
+                items: 1,
+                navText: ["<span>←</span>", "<span>→</span>"] // Menor texto no mobile
+            },
+            480: {
+                items: 1
+            },
+            768: {
+                items: 1
+            },
+            1024: {
+                items: 1
+            }
+        }
     });
+});
