@@ -34,7 +34,7 @@ body {
 /*imagem do header*/
 
 #img_introducao {
-    background: linear-gradient(90deg, rgba(255, 13, 174, 1) 0%, rgba(237, 83, 83, 1) 100%);
+    background: linear-gradient(90deg, rgb(202, 10, 138) 0%, rgba(237, 83, 83, 1) 100%);
 }
 
 #img_introducao img {
@@ -141,7 +141,7 @@ h1 {
 
 #materiais_conteiner {
     background: #FF0DAE;
-    background: linear-gradient(90deg, rgba(255, 13, 174, 1) 0%, rgba(237, 83, 83, 1) 100%);
+    background: linear-gradient(90deg, rgb(172, 8, 117) 0%, rgba(237, 83, 83, 1) 100%);
 }
 
 #materiais {
@@ -282,17 +282,104 @@ iframe {
 /*Sessao dos Clientes*/
 #clientes {
     background: #FF0DAE;
-    background: linear-gradient(90deg, rgba(255, 13, 174, 1) 0%, rgba(237, 83, 83, 1) 100%);
+    background: linear-gradient(90deg, rgb(199, 18, 139) 0%, rgba(237, 83, 83, 1) 100%);
     padding: 2rem 4rem;
 }
 
 #clientes h2 {
     color: #ffffff;
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
     padding: 2rem;
 }
 
+#carrossel {
+    font-size: 1.6rem;
+    padding: 2rem;
+    color: white;
+    background: linear-gradient(90deg, #5b102b, #ac1d51);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    margin: -2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.item {
+    text-transform: uppercase;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.item h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffdfef;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.item p {
+    font-size: 1.4rem;
+    text-transform: none;
+    font-weight: normal;
+    color: hwb(0 89% 0%);
+    padding-bottom: 1rem;
+    text-transform: lowercase;
+}
+
+/* Botões de navegação */
+.owl-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.owl-nav button {
+    background: #fff;
+    color: #ac1d51;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1.2rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.owl-nav button:hover {
+    background: #ac1d51;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Remove estilo padrão dos botões */
+.owl-nav button span {
+    display: block;
+}
+
+/* Dots (se quiser usar) */
+.owl-dots {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.owl-dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    transition: background 0.3s ease;
+}
+
+.owl-dot.active {
+    background: #fff;
+}
 
 /*TEXTO ENROLAR*/
 #texto_enrolar {
@@ -359,7 +446,7 @@ strong {
     padding: 3rem;
     color: white;
     display: flex;
-    padding: 10rem;
+    padding: 9rem;
 }
 
 #parte1 img {
@@ -371,94 +458,18 @@ strong {
     text-align: left;
 }
 
+#parte2 {
+    padding: 1rem;
+}
+
+#parte3 h2{
+    padding: 1rem;
+}
+
 /*DETALHES*/
 h3 {
     text-align: center;
     text-transform: uppercase;
-}
-
-#carrossel {
-    font-size: 1.6rem;
-    padding: 2rem;
-    color: white;
-    background: linear-gradient(90deg, #f02670, #ac1d51);
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    margin: -2rem;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-}
-
-.item {
-    text-transform: uppercase;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-    padding: 1rem 0;
-    text-align: center;
-}
-
-.item h3 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #ffdfef;
-    margin-bottom: 0.5rem;
-}
-
-.item p {
-    font-size: 1.4rem;
-    text-transform: none;
-    font-weight: normal;
-    color: #fff;
-    padding-bottom: 1rem;
-}
-
-/* Botões de navegação */
-.owl-nav {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-}
-
-.owl-nav button {
-    background: #fff;
-    color: #ac1d51;
-    border: none;
-    border-radius: 6px;
-    padding: 0.5rem 1.2rem;
-    font-size: 1.4rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.owl-nav button:hover {
-    background: #ac1d51;
-    color: #fff;
-    transform: scale(1.05);
-}
-
-/* Remove estilo padrão dos botões */
-.owl-nav button span {
-    display: block;
-}
-
-/* Dots (se quiser usar) */
-.owl-dots {
-    text-align: center;
-    margin-top: 1rem;
-}
-
-.owl-dot {
-    width: 10px;
-    height: 10px;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    display: inline-block;
-    margin: 0 5px;
-    transition: background 0.3s ease;
-}
-
-.owl-dot.active {
-    background: #fff;
 }
 
 /*https://heropatterns.com/*/
