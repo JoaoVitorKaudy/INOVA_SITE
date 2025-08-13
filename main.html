@@ -12,7 +12,7 @@
     <!-- Latest compiled and minified CSS --><link rel="stylesheet" href="https://cdn.es.gov.br/scripts/jquery/jquery-owl-carousel/2.0.0/css/owl.carousel.min.css"><!-- Latest compiled and minified JavaScript --><script src="https://cdn.es.gov.br/scripts/jquery/1.11.2/jquery-1.11.2.min.js"></script><script src="https://cdn.es.gov.br/scripts/jquery/jquery-owl-carousel/2.0.0/js/owl.carousel.min.js"></script>
 
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="icone_inova.png" id="icone grafica">
+    <link rel="shortcut icon" type="image/x-icon" href="imagens/icone_inova.png" id="icone grafica">
 
 </head>
 <body>
@@ -31,7 +31,7 @@
         <div class="texto">
             <h1>PRECISANDO DE  UMA COMUNICAÇÃO VISUAL PROFISSIONAL?</h1>
             <p id="destaque">Venha nos conhecer!</p>
-            <p id="horario">Abertos das 09:00 até 18:00</p>
+            <p id="horario">Abertos de Segunda a Sexta - das 09:00 até 18:00</p>
             <p id="paragrafo">Aqui, você encontra soluções gráficas criativas e de qualidade para dar vida às suas ideias, com cores vibrantes, acabamento impecável e entrega no prazo. Impressões de alta qualidade, design personalizado e atendimento que transforma suas ideias em realidade.</p>
             <a href="https://wa.me/5541984788553?text=Olá!%20gostaria%20de%20fazer%20um%20orçamento" target="_blank" id="botao"> FAÇA SEU ORÇAMENTO </a>
         </div>
@@ -156,7 +156,7 @@
             <h2>VEJA ALGUNS COMENTÁRIOS DE NOSSOS CLIENTES</h2>
 
             <div id="carrossel">
-                <div class="item"><h3>Zezinho</h3><p>Detalhes do comentário 1</p></div>
+                <div class="item"><h3>Zezinho</h3><p>"Adorei o serviço"</p></div>
                 <div class="item"><h3>José</h3><p>Detalhes do comentário 2</p></div>
                 <div class="item"><h3>Seu Zé</h3><p>Detalhes do comentário 3</p></div>
                 <!-- mais itens -->
@@ -168,13 +168,59 @@
 
     <!--TEXTO-->
     <div id="texto_enrolar">
-        <h1>O MELHOR CUSTO-BENEFICIO EM BANNERS, ADESIVOS E LONAS</h1>
-        <p>bla bla bla bla</p>
+
+        <div id="enrolacao">
+            <h1>POR QUE ESCOLHER A <strong>INOVA</strong> IMPRESSÃO DIGITAL?</h1>
+
+            <ul>
+                <div class="motivo_card">
+                    <img src="imagens/certo.png" alt="Sinal de certo">
+                    <li>produção rápida</li>
+                </div>
+
+                <div class="motivo_card">
+                    <img src="imagens/certo.png" alt="Sinal de certo">
+                    <li>equipamentos de alta tecnologia</li>
+                </div>
+
+                <div class="motivo_card">
+                    <img src="imagens/certo.png" alt="Sinal de certo">
+                    <li>atendimento personalizado e consultivo</li>
+                </div>
+
+                <div class="motivo_card">
+                    <img src="imagens/certo.png" alt="Sinal de certo">
+                    <li>orçamentos online</li>
+                </div>
+
+            </ul>
+        </div>
+
+
+        <div id="imagem_enrolar">
+            <img src="imagens/mulher.png" alt="Mulher sorrindo">
+        </div>
+
     </div>
 
     <!--CONTATO-->
     <div id="contato">
-        <h2>BLA BLA BLA contatos</h2>
+
+        <div id="parte1">
+            <img src="imagens/logo_inova.png" alt="">
+        </div>
+
+        <div id="parte2">
+            <h2>Somos especialistas em impressão digital com a qualidade que a sua empresa precisa. Envie sua arte, escolha o tamanho ideal e receba seu material.</h2>
+        </div>
+
+        <div id="parte3">
+            <h2>Rua Rui Barbosa, 120 - Vargem Grande - Pinhais/PR</h2>
+            <h2>41 984788553</h2>
+            <h2>contato@inovaimpressao.com.br</h2>
+            <h2>atendimento de segunda a sexta - das 9h até 18h</h2>
+        </div>
+
     </div>
 
 </body>
@@ -185,9 +231,31 @@
         margin: 10,
         nav: true,
         items: 1,
-        navText: ["<span>Anterior</span>", "<span>Próximo</span>"]  // textos personalizados
+        navText: ["<span>Anterior</span>", "<span>Próximo</span>"] 
     });
 
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const itens = document.querySelectorAll("#enrolacao li");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                itens.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.classList.add("show");
+                    }, index * 200); // atraso entre cada <li>
+                });
+                observer.disconnect(); // para de observar depois de animar
+            }
+        });
+    }, { threshold: 0.3 }); // 30% visível pra disparar
+
+    observer.observe(document.querySelector("#enrolacao"));
+});
+</script>
+
 
 </html>
