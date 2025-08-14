@@ -344,6 +344,10 @@ background: linear-gradient(-90deg, rgba(204, 31, 94, 1) 0%, rgb(119, 19, 58) 10
     font-weight: bold;
 }
 
+.owl-carousel1 {
+    width: auto;
+}
+
 .owl-nav button {
     background: #fff;
     color: #ac1d51;
@@ -797,3 +801,4 @@ h3 {
         height: 280px;
     }
 }
+
